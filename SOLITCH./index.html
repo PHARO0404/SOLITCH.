@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoLitch</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* Style CSS pour la mise en page de base */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            margin-top: -1%;
+        }
+        header {
+            background-color: #f5f5dc;
+            color: black;
+            padding: 20px;
+            padding-top: 0;
+            margin-right: -1.4%;
+            text-align: center;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            margin-top: 0%;
+            padding-top: 0;
+        }
+        nav {
+            background-color: #f5f5dc !important; /* Couleur de fond de la navbar */
+            display: flex;
+            align-items: center;
+            margin-top: 0px;
+            position: relative; /* Ajout de la position relative */
+            margin-left: 150px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;  
+            padding: 0;
+            display: flex;
+            align-items: center;
+            margin-left: 60px; /* Ajout de la marge à gauche pour aligner les liens au logo */
+            transform: scale(1.1); /* Agrandit de 10% */
+        }
+        nav ul li {
+            margin-left: 30px;
+            margin-right: 10px; /* Ajout de la marge à droite */
+            margin-bottom: -15%;
+        }
+        nav ul li a {
+            color: #FF5847;
+            font-size: 20px; /* Augmentation de la taille de la police */
+            font-weight: bold;
+            text-decoration: none; /* Supprime le soulignement initial */
+        }
+        nav ul li a:hover {
+            color: #ffcc80; /* Couleur du texte au survol */
+            text-decoration: underline; /* Soulignement au survol */
+        }
+        nav img {
+            width: 150px; /* Taille initiale de l'image */
+            height: 200px;
+            transition: transform 0.3s ease; /* Ajout de la transition pour l'effet d'agrandissement */
+            margin-bottom: -7%;
+            padding-bottom: 4%;
+            cursor: pointer;
+            
+        }
+        nav img:hover {
+            transform: scale(1.1); /* Agrandit de 10% */
+        }
+        
+        main {
+            padding: 10px; /* Réduit le padding */
+            width: 100%;
+            background-image: url('118429_w1024h768c1cx1058cy708.jpg'); /* Ajout de l'image de fond */
+            background-size: cover; /* Redimensionner l'image pour couvrir toute la section */
+            background-position: center; /* Centrer l'image de fond */
+            background-repeat: no-repeat; /* Ne pas répéter l'image de fond */
+            margin: 0; /* Réduit la marge */
+            box-shadow: none; /* Supprime l'ombre */
+        }
+       
+        footer {
+        background-color: #f5f5dc;
+        color: black;
+        text-align: center;
+        padding-bottom: 0.002%; 
+        margin-right:-1.2%;
+        }
+        /* Style CSS pour le contenu */
+        section {
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px; /* Réduit la marge en bas */
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        section img {
+            display: block;
+            margin: auto;
+            margin-bottom: 20px;
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        section p {
+            text-align: center;
+        }
+        section button {
+            display: block;
+            margin: auto;
+            background-color: #FF5847;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        
+        input[type="text"] {
+            display: none;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 150px;
+            position: absolute;
+            right: 60px;
+            bottom: 29px; /* Ajustement de la position verticale */
+        }
+        button.search-btn {
+            background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="material-symbols-outlined"%3E%3Ccircle cx="11" cy="11" r="8" /%3E%3Cline x1="21" y1="21" x2="16.65" y2="16.65" /%3E%3C/svg%3E');
+            background-repeat: no-repeat;
+            background-size: 20px;
+            background-position: center;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            bottom: 25px; /* Ajustement de la position verticale */
+            z-index: 1;
+            background-color: #FF5847;
+        }
+        button.search-btn:focus {
+            outline: none;
+        }
+        h2 {
+            color: #f5f5dc;
+            font-weight: 900 ;
+            font-size: 34px;
+            padding-left: 30px;
+            text-align: center;
+            font-family:'Bowlby One'; 
+
+            text-shadow: 
+            -1px -1px 0 #000,  
+            1px -1px 0 #000,
+            -1px  1px 0 #000,
+            1px  1px 0 #000; /* Ajoute une ombre de contour noire autour du texte */
+        }
+        div p{  
+            font-family:'Bowlby One'; 
+            font-size: 23px;
+            font-weight: bolder;
+            text-shadow: 
+            -1px -1px 0 #000,  
+            1px -1px 0 #000,
+            -1px  1px 0 #000,
+            1px  1px 0 #000; /* Ajoute une ombre de contour noire autour du texte */
+            color:white;
+        }
+        /* Style du cadre */
+        .cadre {
+            background-color: #f5f5dc; /* Couleur de fond semi-transparente */
+            padding: 10px; /* Espacement interne */
+            border-radius: 10px; /* Coins arrondis */
+            margin-top: 0px; /* Espacement supérieur */
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Ombre */
+            width: 25%;
+            margin-left: 6%;
+            display: inline-block;
+        }
+        /* Appliquer l'animation au bouton */
+        #btnAddToCart {
+            transition: transform 0.3s ease;
+        }
+        #btnAddToCart:hover {
+        transform: scale(1.1);
+        }
+        /* Style pour le formulaire de contact */
+/* CSS pour le formulaire de contact */
+.contact {
+  padding-top: 27px;
+  padding-bottom: 27px;
+}
+
+@media screen and (min-width: 750px) {
+  .contact {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+}
+
+.title {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+.field__input {
+  width: 50%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.field__label {
+  color: #fff;
+  font-size: 16px;
+}
+
+.contact__button {
+  text-align: center;
+}
+
+.button {
+  background-color: #FF5847;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ffcc80;
+}
+
+
+form{
+    margin-left: 480px;
+    margin-bottom: 10%;
+}
+#boutonenvoyer{
+    margin-right: 7%;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+        </div>
+        <nav>
+            <img src="440096667_3745694719082529_5337622192098776716_n-removebg-preview.png" alt="Logo de la boutique">
+            <ul>
+                <li><a href="solitch.html">Accueil</a></li>
+                <li><a href="solitch.html">Articles</a></li>
+                <li><a href="solitch.html">Panier</a></li>
+            </ul>
+            <form id="search-form" action="#" method="get">
+                <input type="text" id="search-input" placeholder="Rechercher...">
+                <button class="search-btn" type="button" onmouseover="toggleSearch()"></button>
+            </form>
+        </nav>
+    </header>
+
+    <main>
+      <section>
+      
+        <h2>LA SPÉCIALITÉ LIÉGEOISE EN CANETTE !</h2>
+        <div class="canette-container"> <!-- Ajout de la classe canette-container -->
+            <!-- Première canette -->
+            <div class="cadre">
+                <img src="IMG_3613.jpg" alt="Article en vente" width="300" height="300">
+                <p>SoLitch Classic</p>
+                <p>Prix: 1.80€</p>
+                <button id="btnAddToCart">Ajouter au panier</button>
+            </div>
+            <!-- Deuxième canette --> 
+            <div class="cadre">
+                <img src="IMG_3613.jpg" alt="Article en vente" width="300" height="300">
+                <p>SoLitch Blood Orange</p>
+                <p>Prix: 1.80€</p>
+                <button id="btnAddToCart">Ajouter au panier</button>
+            </div>
+            <!-- Troisième canette -->
+            <div class="cadre">
+                <img src="IMG_3613.jpg" alt="Article en vente" width="300" height="300">
+                <p>SoLitch Lemon</p>
+                <p>Prix: 1.80€</p>
+                <button id="btnAddToCart">Ajouter au panier</button>
+            </div>
+        </div>
+    </section>
+    </main>
+    <div class="color-background-1 gradient">
+        <div class="contact page-width section-padding">
+          <h2 class="title">
+            Formulaire de contact
+          </h2>
+          <form method="post" action="#" id="ContactForm">
+            <div class="contact__fields">
+              <div class="field">
+                <input class="field__input" autocomplete="name" type="text" id="ContactForm-name" name="contact[Name]" value="" placeholder="Nom">
+              </div>
+              <div class="field">
+                <input autocomplete="email" type="email" id="ContactForm-email" class="field__input" name="contact[email]" value="" placeholder="Email">
+              </div>
+              <div class="field">
+                <input type="tel" id="ContactForm-phone" class="field__input" autocomplete="tel" name="contact[Phone number]" pattern="[0-9\-]*" value="" placeholder="Numéro de téléphone">
+              </div>
+              <div class="field">
+                <textarea rows="10" id="ContactForm-body" class="text-area field__input" name="contact[Comment]" placeholder="Message"></textarea>
+              </div>
+            </div>
+            <div class="contact__button">
+              <button type="submit" class="button" id="boutonenvoyer">
+                Envoyer
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+
+    <footer>
+        <p>&copy; 2024 SOLITCH</p>
+    </footer>
+
+    <script>
+        // Fonction pour afficher/masquer la barre de recherche
+        function toggleSearch() {
+            var input = document.getElementById("search-input");
+            if (input.style.display === "block") {
+                input.style.display = "none";
+            } else {
+                input.style.display = "block";
+                input.focus();
+            }
+        }
+    </script>
+</body>
+</html>
